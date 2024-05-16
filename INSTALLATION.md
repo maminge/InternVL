@@ -18,8 +18,10 @@
   For examples, to install `torch==2.0.1` with `CUDA==11.8`:
 
   ```bash
+  # 需要注意pytory-cuda的版本和系统cuda版本是否一致
   conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.8 -c pytorch -c nvidia
-  # or
+  conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=12.1 -c pytorch -c nvidia
+# or
   pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
   ```
 
@@ -42,8 +44,14 @@
 
   ```bash
   pip install timm==0.9.12
+
+
   pip install -U openmim
   mim install mmcv-full==1.6.2  # (optional, for mmsegmentation)
+
+  or
+  pip install mmcv-full
+
   ```
 
 - Install `transformers==4.37.2`:
