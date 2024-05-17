@@ -4,7 +4,7 @@
 
 ```shell
 # run the command in the `internvl_chat_llava` folder
-python -m llava.serve.controller --host 0.0.0.0 --port 10000
+python -m llava.serve.controller --host localhost --port 10000
 ```
 
 ## Launch a gradio web server
