@@ -12,12 +12,12 @@
   //sudo apt install nvidia-cuda-toolkit
 
   降低GCC版本
-  sudo apt install gcc-9 g++-9
-  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 100 # gcc-9替换成你要用的版本
+  //sudo apt install gcc-9 g++-9
+  //sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 100 # gcc-9替换成你要用的版本
 
   安装CUDA：12.1
   wget https://developer.download.nvidia.com/compute/cuda/12.1.0/local_installers/cuda_12.1.0_530.30.02_linux.run
-  
+
   sudo sh cuda_12.1.0_530.30.02_linux.run
   不要选择显卡驱动的安装，也就是去掉第一个框框内的×，点击install，等待。
 
@@ -32,7 +32,19 @@
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.1/lib64
   export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda-12.1/lib64
 
+  安装cuDNN：
+  wget https://developer.download.nvidia.com/compute/cudnn/9.1.1/local_installers/cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
+  sudo dpkg -i cudnn-local-repo-ubuntu2204-9.1.1_1.0-1_amd64.deb
+  sudo cp /var/cudnn-local-repo-ubuntu2204-9.1.1/cudnn-*-keyring.gpg /usr/share/keyrings/
+  sudo apt-get update
+  sudo apt-get -y install cudnn
 
+  To install for CUDA 11, perform the above configuration but install the CUDA 11 specific package:
+  sudo apt-get -y install cudnn-cuda-11
+
+  To install for CUDA 12, perform the above configuration but install the CUDA 12 specific package:
+  sudo apt-get -y install cudnn-cuda-12
+  
   检测：
   
   ```
