@@ -1,6 +1,6 @@
 ## 🛠️ Installation
 
-- 如何安装Nvidia CUDA和驱动（Ubuntu24.04 LTS）:
+- 如何安装Nvidia CUDA和驱动（Ubuntu22.04 LTS）:
   ```bash
   REF: https://blog.csdn.net/weixin_52326559/article/details/126359130
   
@@ -67,6 +67,13 @@
 
   ```bash
   # 需要注意pytory-cuda的版本和系统cuda版本是否一致
+  
+  REF: https://zhuanlan.zhihu.com/p/657080977?utm_id=0
+  
+  sudo apt install libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev
+  conda install pytorch torchvision torchaudio pytorch-cuda -c pytorch -c nvidia
+  pip install torch  --extra-index-url https://download.pytorch.org/whl/cu121
+  
   //conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.8 -c pytorch -c nvidia
   //conda install torch==2.0.1 pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=12.1 -c pytorch -c nvidia
 
@@ -77,8 +84,8 @@
   sudo apt install libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev
   //pip install torch==2.3.0 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
 
-  sudo apt install libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev
-  pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu121
+  //sudo apt install libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev
+  //pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu121
 
   TEST:
 
@@ -97,8 +104,10 @@
 - Install `flash-attn==2.3.6`:
 
   ```bash
+  pip install packaging
   MAX_JOBS=4 pip install flash-attn==2.3.6 --no-build-isolation
-  pip install flash-attn==2.3.6 --no-build-isolation
+  
+  //pip install flash-attn==2.3.6 --no-build-isolation
   ```
 
   Alternatively you can compile from source:
@@ -119,7 +128,9 @@
   ```bash
   pip install timm==0.9.12
   pip install -U openmim
-  mim install mmcv-full==1.6.2  # (optional, for mmsegmentation)
+  pip install chardet
+  //mim install mmcv-full==1.6.2  # (optional, for mmsegmentation)
+  pip install mmcv-full
   ```
 
 - Install `transformers==4.37.2`:
@@ -144,6 +155,7 @@
 
   ```bash
   pip install opencv-python termcolor yacs pyyaml scipy
-  pip install deepspeed==0.13.5
+  //pip install deepspeed==0.13.5
+  pip install deepspeed
   pip install pycocoevalcap tqdm
   ```
