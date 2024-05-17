@@ -82,14 +82,8 @@
 
   ```bash
   pip install timm==0.9.12
-
-
   pip install -U openmim
   mim install mmcv-full==1.6.2  # (optional, for mmsegmentation)
-
-  or
-  pip install mmcv-full
-
   ```
 
 - Install `transformers==4.37.2`:
