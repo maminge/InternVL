@@ -9,7 +9,7 @@
   sudo apt purge nvidia*
   nvidia-smi
 
- # sudo apt install nvidia-cuda-toolkit
+  //sudo apt install nvidia-cuda-toolkit
 
   降低GCC版本
   sudo apt install gcc-9 g++-9
