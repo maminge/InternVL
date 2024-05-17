@@ -74,6 +74,7 @@
   
   //pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
   REF: https://zhuanlan.zhihu.com/p/657080977?utm_id=0
+  sudo apt install libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev
   pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
 
   TEST:
