@@ -68,14 +68,17 @@
   ```bash
   # 需要注意pytory-cuda的版本和系统cuda版本是否一致
   //conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.8 -c pytorch -c nvidia
-  //conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=12.1 -c pytorch -c nvidia
+  //conda install torch==2.0.1 pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=12.1 -c pytorch -c nvidia
 
   or
   
   //pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
   REF: https://zhuanlan.zhihu.com/p/657080977?utm_id=0
   sudo apt install libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev
-  pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
+  //pip install torch==2.3.0 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
+
+  sudo apt install libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev
+  pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu121
 
   TEST:
 
