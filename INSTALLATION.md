@@ -66,6 +66,7 @@
 - Install `flash-attn==2.3.6`:
 
   ```bash
+  MAX_JOBS=4 pip install flash-attn==2.3.6 --no-build-isolation
   pip install flash-attn==2.3.6 --no-build-isolation
   ```
 
@@ -75,6 +76,10 @@
   git clone https://github.com/Dao-AILab/flash-attention.git
   cd flash-attention
   git checkout v2.3.6
+
+  cd ./csrc/
+  git clone https://github.com/NVIDIA/cutlass.git
+  
   python setup.py install
   ```
 
