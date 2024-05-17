@@ -9,6 +9,8 @@
   sudo apt purge nvidia*
   nvidia-smi
 
+ # sudo apt install nvidia-cuda-toolkit
+
   降低GCC版本
   sudo apt install gcc-9 g++-9
   sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 100 # gcc-9替换成你要用的版本
@@ -26,9 +28,9 @@
   配置：加入CUDA环境变量配置信息
   sudo vim ~/.bashrc
 
-  export PATH=$PATH:/usr/local/cuda/bin  
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64  
-  export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda/lib64
+  export PATH=$PATH:/usr/local/cuda-12.1/bin
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.1/lib64
+  export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda-12.1/lib64
 
 
   检测：
