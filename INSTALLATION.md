@@ -1,5 +1,39 @@
 ## 🛠️ Installation
 
+- 如何安装Nvidia CUDA和驱动（Ubuntu24.04 LTS）:
+  ```bash
+  REF: https://blog.csdn.net/weixin_52326559/article/details/126359130
+  
+  卸载系统自带驱动
+  sudo apt remove nvidia*
+  sudo apt purge nvidia*
+  nvidia-smi
+
+  降低GCC版本
+  sudo apt install gcc-9 g++-9
+  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 100 # gcc-9替换成你要用的版本
+
+  安装CUDA：12.1
+  wget https://developer.download.nvidia.com/compute/cuda/12.1.0/local_installers/cuda_12.1.0_530.30.02_linux.run
+  
+  sudo sh cuda_12.1.0_530.30.02_linux.run
+  不要选择显卡驱动的安装，也就是去掉第一个框框内的×，点击install，等待。
+
+  从nvidia.com / nvidia.cn下载对应版本驱动并安装
+  sudo sh NVIDIA-Linux-x86_64-550.78.run
+
+
+  配置：加入CUDA环境变量配置信息
+  sudo vim ~/.bashrc
+
+  export PATH=$PATH:/usr/local/cuda/bin  
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64  
+  export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda/lib64
+
+
+  检测：
+  
+  ```
 - Clone this repository:
 
   ```bash
