@@ -11,7 +11,7 @@ python -m llava.serve.controller --host 0.0.0.0 --port 10000
 
 ```shell
 # run the command in the `internvl_chat_llava` folder
-python -m llava.serve.gradio_web_server --controller http://localhost:10000 --model-list-mode reload
+python -m llava.serve.gradio_web_server --host 0.0.0.0 --port 8080 --controller http://localhost:10000 --model-list-mode reload
 ```
 
 ## Launch a model worker
