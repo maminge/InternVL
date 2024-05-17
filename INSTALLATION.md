@@ -75,6 +75,19 @@
   //pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
   REF: https://zhuanlan.zhihu.com/p/657080977?utm_id=0
   pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
+
+  TEST:
+
+  test.py
+  import torch
+  print(torch.__version__)
+  print(torch.cuda.is_available())
+
+  python test.py
+  
+  OUTPUT:
+    2.3.0+cu121
+    True
   ```
 
 - Install `flash-attn==2.3.6`:
